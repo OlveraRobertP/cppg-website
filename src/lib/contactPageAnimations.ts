@@ -14,7 +14,7 @@ export const contactPageVariants = {
   },
   title: {
     hidden: { opacity: 0, y: 8 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] } },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] as const } },
   },
   column: {
     hidden: { opacity: 0, x: -16 },
@@ -23,7 +23,7 @@ export const contactPageVariants = {
       x: 0,
       transition: {
         duration: 0.4,
-        ease: [0.25, 0.46, 0.45, 0.94],
+        ease: [0.25, 0.46, 0.45, 0.94] as const,
         staggerChildren: 0.05,
         delayChildren: 0.1,
       },
@@ -36,7 +36,7 @@ export const contactPageVariants = {
       x: 0,
       transition: {
         duration: 0.4,
-        ease: [0.25, 0.46, 0.45, 0.94],
+        ease: [0.25, 0.46, 0.45, 0.94] as const,
       },
     },
   },
@@ -46,4 +46,4 @@ export const contactPageVariants = {
   },
 } as const
 
-export const formFieldTransition = { duration: 0.35, ease: [0.25, 0.46, 0.45, 0.94] }
+export const formFieldTransition = { duration: 0.35, ease: [0.25, 0.46, 0.45, 0.94] as const }
