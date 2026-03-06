@@ -1,0 +1,134 @@
+/* Alright Sans – fuente principal (Thin por defecto) */
+@font-face {
+  font-family: 'Alright Sans';
+  src: url('/fonts/AlrightSans-Thin.woff2') format('woff2'),
+       url('/fonts/AlrightSans-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Alright Sans';
+  src: url('/fonts/AlrightSans-Light.woff2') format('woff2'),
+       url('/fonts/AlrightSans-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Alright Sans';
+  src: url('/fonts/AlrightSans.woff2') format('woff2'),
+       url('/fonts/AlrightSans.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Alright Sans';
+  src: url('/fonts/AlrightSans-Medium.woff2') format('woff2'),
+       url('/fonts/AlrightSans-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Alright Sans';
+  src: url('/fonts/AlrightSans-Bold.woff2') format('woff2'),
+       url('/fonts/AlrightSans-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Cuestionario CPPG: primario #0E1B2E (azul marino), secundario #D2D2D2 (gris plata) */
+    --background: 0 0% 99%;
+    --foreground: 214 51% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 214 51% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 214 51% 12%;
+    --primary: 214 51% 12%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 82%;
+    --secondary-foreground: 214 51% 12%;
+    --muted: 0 0% 94%;
+    --muted-foreground: 214 20% 35%;
+    --accent: 0 0% 82%;
+    --accent-foreground: 214 51% 12%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 82%;
+    --input: 0 0% 88%;
+    --ring: 214 51% 12%;
+    --radius: 0.75rem;
+    --chart-1: 214 51% 12%;
+    --chart-2: 0 0% 82%;
+    --chart-3: 214 20% 35%;
+    --chart-4: 0 0% 94%;
+    --chart-5: 0 0% 100%;
+    --sidebar: 0 0% 99%;
+    --sidebar-foreground: 214 51% 12%;
+    --section-alt: 0 0% 97%;
+    --card-elevated: 0 1px 3px hsl(0 0% 0% / 0.06);
+  }
+  .dark {
+    --background: 214 51% 8%;
+    --foreground: 0 0% 100%;
+    --card: 214 40% 14%;
+    --card-foreground: 0 0% 100%;
+    --popover: 214 40% 14%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 0 0% 82%;
+    --primary-foreground: 214 51% 12%;
+    --secondary: 214 30% 22%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 214 30% 22%;
+    --muted-foreground: 0 0% 82%;
+    --accent: 214 30% 22%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 30% 22%;
+    --input: 214 30% 22%;
+    --ring: 0 0% 82%;
+    --chart-1: 0 0% 82%;
+    --chart-2: 214 30% 22%;
+    --chart-3: 214 51% 12%;
+    --chart-4: 0 0% 82%;
+    --chart-5: 214 40% 14%;
+    --sidebar: 214 51% 8%;
+    --sidebar-foreground: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-size: 1rem;
+    font-weight: 100; /* Alright Sans Thin por defecto */
+    line-height: 1.8;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans;
+    font-weight: 100;
+    line-height: 1.4;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .section-alt {
+    background-color: hsl(var(--section-alt));
+  }
+}
