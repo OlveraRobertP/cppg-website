@@ -20,11 +20,11 @@ export function Header() {
           className="flex min-w-0 shrink items-center sm:min-w-0 sm:shrink"
           aria-label="CPPG – Inicio"
         >
-          <span className="relative block h-8 w-[7.5rem] shrink-0 overflow-hidden sm:h-9 sm:max-w-[55vw] sm:w-auto sm:overflow-visible md:max-w-none">
+          <span className="relative flex h-8 min-w-0 shrink-0 items-center sm:h-9 sm:max-w-[55vw] sm:w-auto md:max-w-none">
             <img
               src="/images/logo-cppg-1024.png"
               alt="CPPG Carranza Preciado Pulido Guakil"
-              className="h-8 w-auto min-w-[12rem] object-cover object-left brightness-0 invert sm:min-w-0 sm:h-9 sm:w-full sm:max-w-full sm:object-contain"
+              className="h-8 w-auto max-w-[8.5rem] min-w-0 shrink-0 object-contain object-left brightness-0 invert sm:max-w-full sm:h-9 sm:w-full"
               onError={(e) => {
                 e.currentTarget.onerror = null
                 e.currentTarget.src = '/images/logo-cppg.png'
