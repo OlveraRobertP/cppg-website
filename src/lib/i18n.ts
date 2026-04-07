@@ -28,6 +28,12 @@ export const translations = {
       contact: 'Contacto',
       send: 'Enviar',
     },
+    areaDetail: {
+      services: 'Servicios',
+      ctaTitle: 'Hablemos de tu caso',
+      ctaBody:
+        'Agenda una consulta o envíanos un mensaje. Te orientamos sobre el mejor camino legal.',
+    },
     home: {
       heroTitle: 'CPPG – Firma Legal',
       heroIntro:
@@ -120,6 +126,11 @@ export const translations = {
       readMore: 'Read more',
       contact: 'Contact',
       send: 'Send',
+    },
+    areaDetail: {
+      services: 'Services',
+      ctaTitle: "Let's talk about your matter",
+      ctaBody: 'Schedule a consultation or send us a message. We will help you find the right legal path.',
     },
     home: {
       heroTitle: 'CPPG – Law Firm',

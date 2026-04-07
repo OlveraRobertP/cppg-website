@@ -1,6 +1,91 @@
-export type AreaContent = { title: string; sections: { heading?: string; body: string; items?: string[] }[] }
+import type { Locale } from '@/lib/i18n'
+
+export type AreaSection = {
+  heading?: string
+  body: string
+  items?: string[]
+  omitFromProse?: boolean
+}
+
+export type AreaContent = {
+  title: string
+  titleEn?: string
+  sections: AreaSection[]
+  /** When present, used for English routes instead of {@link AreaContent.sections}. */
+  sectionsEn?: AreaSection[]
+}
+
+export function getAreaContentForLocale(content: AreaContent, locale: Locale): { title: string; sections: AreaSection[] } {
+  if (locale === 'en' && content.sectionsEn?.length) {
+    return {
+      title: content.titleEn ?? content.title,
+      sections: content.sectionsEn,
+    }
+  }
+  return { title: content.title, sections: content.sections }
+}
 
 export const areaContent: Record<string, AreaContent> = {
+  'resolucion-conflictos-y-desbloqueo-de-operaciones': {
+    title: 'Resolución de Conflictos y Desbloqueo de Operaciones',
+    titleEn: 'Conflict Resolution and Unblocking of Operations',
+    sections: [
+      {
+        heading: 'Experiencia',
+        body:
+          'Cuando las operaciones se estancan y las negociaciones llegan a un punto muerto, CPPG hace uso de estrategias legales creativas y herramientas de negociación necesarias para romper los bloqueos. Nos especializamos en diagnosticar las causas raíz de las transacciones bloqueadas ya sean desacuerdos accionarios, disputas de gobierno corporativo u obstáculos estructurales e implementar soluciones que relancen los negocios.',
+        omitFromProse: true,
+      },
+      {
+        heading: 'Trayectoria',
+        body:
+          'Nuestros socios han guiado a clientes a través de complejos estancamientos en M&A, conflictos de asociaciones estratégicas y disputas accionarias, logrando resultados que preservan relaciones y generan valor. Reconocemos que en el entorno actual donde la incertidumbre judicial ha creado nuevas presiones sobre la certeza comercial contar con abogados de confianza que puedan navegar tanto los riesgos litigiosos como las alternativas comerciales es esencial.',
+      },
+      {
+        heading: 'Enfoque',
+        body:
+          'Nos destacamos en estrategias de resolución extrajudicial que evitan el litigio innecesario mientras se preserva su posición de negociación. Nuestro enfoque combina negociación rigurosa con solución creativa de problemas, asegurando que nunca sea forzado a un juzgado por circunstancia en lugar de elección. Donde otros ven un callejón sin salida, nosotros vemos un camino hacia adelante.',
+      },
+      {
+        heading: 'Alcance',
+        body: '',
+        items: [
+          'Diagnóstico y desbloqueo de operaciones y negociaciones en punto muerto',
+          'Desacuerdos accionarios, gobierno corporativo y obstáculos estructurales en transacciones',
+          'Resolución extrajudicial, negociación rigurosa y acompañamiento en riesgos litigiosos y alternativas comerciales',
+        ],
+        omitFromProse: true,
+      },
+    ],
+    sectionsEn: [
+      {
+        heading: 'Experience',
+        body:
+          'When operations stall and negotiations reach an impasse, CPPG deploys creative legal strategies and the negotiation tools needed to break deadlocks. We specialize in diagnosing the root causes of blocked transactions—whether shareholder disagreements, corporate governance disputes, or structural hurdles—and implementing solutions that get deals and businesses moving again.',
+        omitFromProse: true,
+      },
+      {
+        heading: 'Track record',
+        body:
+          'Our partners have guided clients through complex standstills in M&A, strategic partnership conflicts, and shareholder disputes, achieving outcomes that preserve relationships and create value. We recognize that in today’s environment—where judicial uncertainty has added new pressure on commercial predictability—having trusted counsel who can navigate both litigation risk and commercial alternatives is essential.',
+      },
+      {
+        heading: 'Approach',
+        body:
+          'We excel at out-of-court resolution strategies that avoid unnecessary litigation while preserving your bargaining position. Our approach combines rigorous negotiation with creative problem-solving, so you are never forced into court by circumstance rather than by choice. Where others see a dead end, we see a path forward.',
+      },
+      {
+        heading: 'Scope',
+        body: '',
+        items: [
+          'Diagnosis and unblocking of stalled deals and negotiations',
+          'Shareholder disagreements, corporate governance, and structural obstacles in transactions',
+          'Out-of-court resolution, rigorous negotiation, and guidance on litigation risk and commercial alternatives',
+        ],
+        omitFromProse: true,
+      },
+    ],
+  },
   'derecho-civil': {
     title: 'Derecho Civil',
     sections: [

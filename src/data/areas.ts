@@ -1,4 +1,10 @@
 export const AREAS = [
+  {
+    slug: 'resolucion-conflictos-y-desbloqueo-de-operaciones',
+    title: 'Resolución de Conflictos y Desbloqueo de Operaciones',
+    titleEn: 'Conflict Resolution and Unblocking of Operations',
+    image: '/images/areas-resolucion-conflictos.png',
+  },
   { slug: 'derecho-civil', title: 'Derecho Civil', titleEn: 'Civil Law', image: '/images/areas-derecho-civil.jpg' },
   { slug: 'derecho-constitucional', title: 'Derecho Constitucional', titleEn: 'Constitutional Law', image: '/images/areas-derecho-constitucional.jpeg' },
   { slug: 'derecho-corporativo', title: 'Derecho Corporativo', titleEn: 'Corporate Law', image: '/images/areas-derecho-corporativo.jpeg' },
