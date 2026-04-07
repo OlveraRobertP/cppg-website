@@ -44,6 +44,11 @@ export const translations = {
       title: 'Áreas de práctica',
       viewAll: 'Ver todas las áreas',
       cardDescription: 'Conoce más sobre nuestra experiencia en {area}.',
+      listSectionLabel: 'Exploración detallada',
+      carouselSectionLabel: 'Recorrido rápido',
+      carouselAriaLabel: 'Carrusel de áreas de práctica',
+      carouselPrev: 'Diapositiva anterior',
+      carouselNext: 'Diapositiva siguiente',
     },
     teamPage: {
       title: 'Equipo',
@@ -142,6 +147,11 @@ export const translations = {
       title: 'Practice areas',
       viewAll: 'View all areas',
       cardDescription: 'Learn more about our experience in {area}.',
+      listSectionLabel: 'Detailed exploration',
+      carouselSectionLabel: 'Quick tour',
+      carouselAriaLabel: 'Practice areas carousel',
+      carouselPrev: 'Previous slide',
+      carouselNext: 'Next slide',
     },
     teamPage: {
       title: 'Team',

@@ -131,4 +131,12 @@
   .section-alt {
     background-color: hsl(var(--section-alt));
   }
+  /* Carruseles horizontales: oculta scrollbar pero mantiene gestos y teclado */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 }
